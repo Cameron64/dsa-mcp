@@ -1,0 +1,28 @@
+{
+  "name": "dsa-mcp",
+  "version": "1.0.0",
+  "description": "Personal-use MCP server exposing Austin DSA domain knowledge (Outline wiki, bylaws, resolutions, education materials, infra reference) over Streamable HTTP",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "node --env-file-if-exists=.env --import tsx --watch src/server.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --import tsx tests/tools.smoke.test.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.0",
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "hono": "^4.10.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}
