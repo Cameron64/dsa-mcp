@@ -53,7 +53,7 @@ Checks: `npm run typecheck` · `npm run build` · `npm test`
 ## Deploy (Railway)
 
 1. `railway login` && `railway init` in this directory.
-2. In the Railway dashboard, connect the service to this GitHub repo (watched branch
+2. Connect the service to this GitHub repo (watched branch
    `main`) — every push auto-deploys. `railway.json` provides the start command,
    `/health` healthcheck, and on-failure restart policy.
 3. Set env vars (never commit them):
